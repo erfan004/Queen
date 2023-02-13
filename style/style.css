@@ -1,0 +1,622 @@
+body{
+    background-color: #DDDDDD;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: pacif;
+    src: url(./fonts/Pacifico-Regular.woff) format('woff') ;
+}
+@font-face {
+    font-family: titr;
+    src: url(./fonts/B\ Titr\ Bold_0.woff) format('woff') ;
+}
+@font-face {
+    font-family: derakhshan;
+    src: url(./fonts/Far_Lotus.woff) format('woff') ;
+}
+.scrollTop{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
+    background-color: #252525;
+    color: #DDDDDD;
+    bottom: 5px;
+    font-size: 3rem;
+    text-align: center;
+    cursor: pointer;
+    z-index: 99999;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+    left: -45px;
+    outline: 2px dotted white;
+    outline-offset: -5px;
+    animation: scrollTopRtt 3s linear ;
+}
+.scrollTop:hover{
+    opacity: 1;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    direction: rtl;
+}
+.header{
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.navLinks{
+    text-decoration: none;
+    color: #000;
+}
+.Hitems{
+    cursor: pointer;
+    position: relative;
+    font-size: 1.5rem;
+    font-family: derakhshan;
+}
+.logoBox{
+    display: block;
+    width: 190px;
+    margin: 0 auto;
+    text-align: center;
+    user-select: none;
+}
+.mobileNav{
+    display: flex;
+}
+.logo{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-family: pacif;
+}
+.Hitems::after{
+    content: '';
+    position: absolute;
+    transition: all ease 0.5s;
+    background-color: #000;
+    bottom: -8px;
+    width: 0px;
+    right: 0;
+    height: 2px;
+    border-radius: 8px;
+}
+.Hitems:hover::after{
+    width: 100%;
+    left: 0;
+}
+.showMenu{
+    border: 2px solid #252525;
+    width: 45px;
+    padding: 6px;
+    margin: 10px auto;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+    height: 40px;
+    margin-top: 50px;
+}
+.Hmobile{
+    width: 30px;
+    height: 5px;
+    background-color: #252525;
+    border-radius: 15px;
+    margin-top: 2px;
+}
+.close{
+    display: none;
+    color: #DDDDDD;
+}
+@keyframes showImg {
+    0%{
+        opacity: 0;
+        filter: grayscale(100%);
+    }
+    50%{
+        filter: grayscale(50%);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Start Of whatIsQueen codes */
+
+.whatIsQueen{
+    margin: 20px auto;
+    padding: 15px;
+    position: relative;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(0deg , #000 , #262626);
+}
+@keyframes rgbBorder {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: -400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.whatIsQueen::before{
+    content: '';
+    position: absolute;
+    border-radius: 12px;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px) ;
+    height: calc(100% + 8px);
+    background: rgb(251,0,148);
+    background: linear-gradient(90deg, rgba(251,0,148,1) 0%, rgba(0,0,255,1) 6%, rgba(0,255,0,1) 14%, rgba(255,255,0,1) 26%, rgba(255,0,0,1) 36%, rgba(251,0,148,1) 47%, rgba(0,0,255,1) 58%, rgba(0,255,0,1) 71%, rgba(255,255,0,1) 84%, rgba(255,0,0,1) 95%);
+    background-size: 400%;
+    z-index: -1;
+    animation: rgbBorder 30s linear infinite;
+}
+.wiqImgBox{
+    width: 48%;
+}
+.wiqImg{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: showImg 2s linear 1;
+}
+.wiqInfo{
+    width: 50%;
+    margin-right: 25px;
+    margin-top: 120px;
+}
+.wiqTitle{
+    color: #FFE4E1;
+    font-size: 2.5rem;
+    text-align: right;
+    font-family: titr;
+}
+.wiqParagraph{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-top: 25px;
+    color: #FFE4E1;
+    font-family: derakhshan;
+}
+/* End Of whatIsQueen codes */
+
+/* Start of Biography codes */
+
+.biography{
+    padding: 15px;
+}
+.freddie{
+    display: none;
+}
+.brian{
+    display: none;
+}
+.roger{
+    display: none;
+}
+.john{
+    display: none;
+}
+.biographyTitle{
+    text-align: center;
+    font-size: 3rem;
+    font-family: titr;
+}
+.bioInfo{
+    text-align: center;
+    margin-top: 10px;
+    font-family: derakhshan;
+}
+.names{
+    font-size: 2.3rem;
+    font-family: titr;
+    margin: 15px;
+}
+.biographyParagraph{
+    font-family: derakhshan;
+    font-size: 1.3rem;
+}
+.ImgBox{
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+}
+.Img{
+    border-radius: 12px;
+    width: 45%;
+}
+.bioSection{
+    margin: 15px 0;
+    font-family: derakhshan;
+}
+.memebers{
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.queenMembers{
+    width: 300px;
+    height: 400px;
+    margin: 10px 15px;
+    border-radius: 12px;
+    position: relative;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+.membersNames{
+    font-size: 2rem;
+    font-family: titr;
+    top: -65px;
+    right: 10px;
+    align-items: center;
+    position: absolute;
+    transition: all 0.5s;
+    color: #FFE4E1;
+    z-index: 10;
+}
+.queenMembers:hover .membersNames{
+    top: 10px;
+}
+.membersImg{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+}
+.queenMembers:hover .membersImg{
+    filter: grayscale(0);
+}
+/* End Of Biography codes */
+
+/* Start Of Best Songs codes */
+
+.boq{
+    font-size: 3rem;
+    text-align: center;
+    font-family: titr;
+}
+.musics{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 10px auto;
+    flex-wrap: wrap;
+}
+.songBox{
+    border-radius: 12px;
+    width: 300px;
+    height: 350px;
+    background-color: #A0C1B8;
+    position: relative;
+    margin: 10px 10px;
+}
+.songBox::before{
+    content: '';
+    position: absolute;
+    border-radius: 12px;
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px) ;
+    height: calc(100% + 8px);
+    background: rgb(251,0,148);
+    background: linear-gradient(90deg, rgb(130, 34, 127) 0%, rgba(0,0,255,1) 6%, rgb(66, 215, 192) 14%, rgba(255,0,0,1) 36%, rgba(251,0,148,1) 47%, rgba(0,0,255,1) 58%, rgb(29, 104, 107) 71%, rgba(255,0,0,1) 95%);
+    background-size: 400%;
+    filter: blur(15px);
+    z-index: -1;
+    animation: rgbBorder 30s linear infinite;
+}
+.songLabel{
+    color: rgb(25, 25, 25);
+    text-align: center;
+    margin-top: 5px;
+    text-transform: capitalize;
+    font-family: pacif;
+}
+.musicCoverBox{
+    width: 230px;
+    height: 230px;
+    margin: 10px auto;
+    border-radius: 50%;
+    position: relative;
+}
+.musicCoverBox::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    top: 45%;
+    box-shadow: 0 0 8px white;
+    transform: translate(-50% );
+    background-color: white;
+    border-radius: 50%;
+}
+@keyframes coverRtt {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.coverRtt{
+    animation: coverRtt 12s linear infinite;
+}
+.musicCover{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    user-select: none;
+}
+.songsHolder{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 100%;
+}
+
+/*start of movie code */
+.movie{
+    background-image: url(../img/movieImg/image_9f62486a.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    direction: rtl;
+    padding: 15px;
+    color: #DDDDDD;
+    margin: 25px 0;
+}
+.movieTitle{
+    margin: 25px 0;
+    font-size: 3rem;
+    text-align: center;
+    font-family: titr;
+}
+.movieSection{
+    margin: 15px 0;
+    font-family: derakhshan;
+}
+.movieInfo{
+    font-size: 1.5rem;
+    font-family: derakhshan;
+}
+.movieImg{
+    text-align: center;
+    margin: 0;
+    height: 600px;
+}
+.actorsListBox{
+    text-align: center;
+    direction: rtl;
+}
+.actorsInfo{
+    font-size: 1.5rem;
+    font-family: derakhshan;
+    margin: 10px 0;
+}
+@keyframes widthChange{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 250px;
+    }
+}
+.queenBox{
+    margin: 10px auto;
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-family: pacif;
+    user-select: none;
+    width: 250px;
+    position: relative;
+    direction: ltr;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    animation: widthChange 6s linear infinite;
+}
+/* start of footer codes */
+.footer{
+    background-color: #252525;
+    direction: rtl;
+    color: #DDDDDD;
+}
+.footerSections{
+    display: flex;
+    padding-top: 22px;
+}
+.footerItems{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+.footerList{
+    padding: 0 20px;
+}
+.footerItem{
+    list-style-type: none;
+    margin: 5px 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    font-family: derakhshan;
+    transition: all linear 0.3s;
+}
+.footerLinks{
+    text-decoration: none;
+    color: #DDDDDD;
+}
+.footerItem:hover{
+    opacity: 1;
+}
+.footerInfo{
+    font-size: 1.5rem;
+    font-family: derakhshan;
+    margin: 0 auto;
+    max-width: 50%;
+}
+.socialMedias{
+    display: flex;
+    flex-direction: column;
+    direction: ltr;
+    padding: 0px 15px;
+}
+.medias:hover{
+    opacity: 1;
+}
+.medias{
+    opacity: 0.7;
+    padding: 0 15px;
+    transition: all linear 0.3s;
+    margin: 10px auto;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.copyRight{
+    border-top: 1px solid gray;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    user-select: none;
+    font-family: derakhshan;
+}
+.fa-instagram{
+    background: #d6249f;
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+    -webkit-background-clip:text;
+    color: transparent;
+}   
+.fa-telegram{
+    color: #2AABEE;
+}
+.fa-twitter{
+    color:  #0084B4;
+}
+/* respoinsive codes */
+@media screen and (max-width:1200px) {
+    .whatIsQueen{
+            flex-direction: column-reverse;
+        }
+        .wiqInfo{
+            width: 90%;
+        }
+        .wiqImgBox{
+            width: 100%;
+        }
+        .Img{
+            width: 100%;
+        }
+        .names{
+            text-align: center;
+        }
+        .bioSection{
+            text-align: center;
+        }
+    }
+    @media screen and (max-width:992px) {
+        .header{
+        height: 0px; 
+        transition: all ease 0.5s;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 8px;
+        justify-content: unsafe;
+        background-color: #252525;
+        border: 0px solid black;
+    }
+    .movie{
+        background-image: url(../img/movieImg/MV5BMTA2NDc3Njg5NDVeQTJeQWpwZ15BbWU4MDc1NDcxNTUz._V1_.jpg);
+    }
+    .navLinks{
+        color: #fff;
+    }
+    .Hitems::after{
+        display: none;
+    }
+    .Hitems{
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 8px;
+    }
+    .showMenu{
+        display: block;
+    }
+    .close{
+        user-select: none;
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .footerSections{
+        flex-direction: column;
+    }
+    .footerInfo{
+        order: 1;
+        margin: 10px auto;
+    }
+    .footerList{
+        list-style-type: none;
+    }
+    .footerItems{
+        order: 2;
+        width: 180px;
+        margin: 10px auto;
+        opacity: 1;
+    }
+    .socialMedias{
+        order: 3;
+        text-align: center;
+    }
+    .medias{
+        width: 200px;
+        opacity: 1;
+    }
+}
+@media screen and (max-width:768px) {
+    .whatIsQueen{
+        width: auto;
+        border-radius: 0px;
+    }
+    .whatIsQueen::before{
+        display: none;
+    }
+    .biography{
+        width: auto;
+    }
+    .memebers{
+        flex-direction: column;
+    }
+    .queenMembers{
+        margin: 10px auto;
+    }
+    .membersNames{
+        top: 10px;
+    }
+    .membersImg{
+        filter: grayscale(0);
+    }
+    .scrollTop{
+        opacity: 1;
+    }
+}
